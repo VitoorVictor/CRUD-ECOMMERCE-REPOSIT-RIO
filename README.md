@@ -5,3 +5,10 @@ Esboço para o trabalho realizado através do FIGMA - https://www.figma.com/file
 ## Screenshots DEER
 
 (https://prnt.sc/hsm65SY_P2rQ)
+
+## Autores
+
+- [@Vitor Victor - RA: 223907-1](https://github.com/VitoorVictor)
+- [@Samara Sampaio - RA: 227673-1](https://github.com/samarasampaio)
+- [@Ruan Higor - 227746-1](https://github.com/ajaax1)
+- [@Murilo - 240665-1](https://www.github.com/octokatherine)
