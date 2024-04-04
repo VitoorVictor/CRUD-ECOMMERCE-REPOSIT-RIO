@@ -12,3 +12,14 @@ Esboço para o trabalho realizado através do FIGMA - https://www.figma.com/file
 - [@Samara Sampaio - RA: 227673-1](https://github.com/samarasampaio)
 - [@Ruan Higor - 227746-1](https://github.com/ajaax1)
 - [@Murilo - 240665-1](https://github.com/murilomobarreto)
+
+## Stack utilizada
+
+**Front-end:** HTML, JS, TailwindCSS
+
+**Back-end:** PHPmyamd, MySQL Workbench
+
+**Protótipo:** Figma
+
+**Editor de Código:** VisualCode
+
