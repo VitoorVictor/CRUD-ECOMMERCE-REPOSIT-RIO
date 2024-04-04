@@ -1,0 +1,7 @@
+RewriteEngine On
+<LimitExcept GET POST HEAD PUT DELETE>
+    Require all denied
+</LimitExcept> 
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1
