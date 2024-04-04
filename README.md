@@ -21,5 +21,5 @@ Esboço para o trabalho realizado através do FIGMA - https://www.figma.com/file
 
 **Protótipo:** Figma
 
-**Editor de Código:** VisualCode
+**Editor de Código:** Visual Studio Code
 
