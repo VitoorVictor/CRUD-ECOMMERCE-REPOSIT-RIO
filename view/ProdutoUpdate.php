@@ -13,7 +13,7 @@ $produtos = new ProdutoModel();
 $produtos = $produtos->select();
 foreach($produtos as $produto){ ?>
 <main class="flex justify-center w-full h-full bg-violet-950">
-    <div class="w-full max-w-screen-xl flex flex-col">
+    <div class="w-full flex flex-col">
         <?php include_once('headerComponente.php') ?>
         <div class="flex flex-col h-full gap-4 w-full justify-center items-center">
             <h1 class="text-white font-bold text-3xl">PRODUTOS</h1>

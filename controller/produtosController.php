@@ -12,8 +12,7 @@ class ProdutosController
         $descricao = $_POST['descricao'];
         $preco = $_POST['preco'];
         $fornecedores_id = $_POST['fornecedor'];
-        $carrinho_id = $_POST['carrinho_id'];
-        $produto = new ProdutoModel($nome, $descricao, $preco, $fornecedores_id, $carrinho_id);
+        $produto = new ProdutoModel($id=null, $nome, $descricao, $preco, $fornecedores_id);
         $produto->insert();
     }
 
@@ -25,11 +24,13 @@ class ProdutosController
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':id', $id);
             $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC)['senha'];
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return json_encode($result);
         } catch(PDOException $e) {
             echo $e->getMessage(); 
         }
     }
+    
 
     public function atualizar()
     {   

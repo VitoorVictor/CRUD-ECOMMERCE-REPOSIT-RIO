@@ -7,27 +7,24 @@ class ProdutoModel{
     private $preco;
     private $descricao;
     private $fornecedores_id;
-    private $carrinho_id;
     
-    public function __construct($id = null, $nome = null, $preco = null, $descricao = null, $fornecedores_id = null, $carrinho_id = null){
+    public function __construct($id = null, $nome = null, $preco = null, $descricao = null, $fornecedores_id = null){
         $this->id = $id;
         $this->nome = $nome;
         $this->preco = $preco;
         $this->descricao = $descricao;
         $this->fornecedores_id = $fornecedores_id;
-        $this->carrinho_id = $carrinho_id;
     }
 
     public function insert() {
         try {
             $connection = new Connection();
             $pdo = $connection->getPdo();
-            $stmt = $pdo->prepare("INSERT INTO produtos (nome, preco, descricao, fornecedores_id, carrinho_id ) VALUES (:nome, :preco, :descricao, :fornecedores_id, :carrinho_id)");
+            $stmt = $pdo->prepare("INSERT INTO produtos (nome, preco, descricao, fornecedores_id ) VALUES (:nome, :preco, :descricao, :fornecedores_id)");
             $stmt->bindParam(':nome', $this->nome);
             $stmt->bindParam(':preco', $this->preco);
             $stmt->bindParam(':descricao', $this->descricao);
             $stmt->bindParam(':fornecedores_id', $this->fornecedores_id);
-            $stmt->bindParam(':carrinho_id', $this->carrinho_id);
             $stmt->execute();
             header('Location:/painel/produtos');
         } catch(PDOException $e) {

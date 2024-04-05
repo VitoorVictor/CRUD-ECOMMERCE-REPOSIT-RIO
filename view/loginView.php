@@ -8,7 +8,7 @@
 ?>
 
 <main class="bg-violet-950 flex justify-center w-full h-full">
-    <div class="max-w-screen-xl w-full h-full flex-col items-center">
+    <div class="w-full h-full flex-col items-center">
         <?php
             include_once('headerComponente.php');
         ?>

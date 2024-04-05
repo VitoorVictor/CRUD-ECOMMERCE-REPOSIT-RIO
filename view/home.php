@@ -5,7 +5,7 @@
 
 <body>
     <div class="bg-gray-300 flex justify-center w-full h-full">
-        <div class="max-w-screen-xl p-1 w-full">
+        <div class="w-full">
             <?php include_once('headerComponente.php') ?>
             <div class="flex items-stretch justify-center mt-40">
                 <h1 class="text-5xl font-bold mb-8 text-purple-800 mt-2 mr-20">Produtos</h1>

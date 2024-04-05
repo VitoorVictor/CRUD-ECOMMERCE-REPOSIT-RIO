@@ -20,7 +20,7 @@ class FornecedorModel{
             $id = $_SESSION['id']; 
             $connection = new Connection();
             $pdo = $connection->getPdo();
-            $stmt = $pdo->prepare("INSERT INTO fornecedores (`razao-social`, email, cnpj, telefone, usuarios_id) VALUES (:razao_social, :email, :cnpj, :telefone, :usuarios_id)");
+            $stmt = $pdo->prepare("INSERT INTO fornecedores (`razao_social`, email, cnpj, telefone, usuarios_id) VALUES (:razao_social, :email, :cnpj, :telefone, :usuarios_id)");
             $stmt->bindParam(':razao_social', $this->razao);
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':cnpj', $this->cnpj);
@@ -64,6 +64,19 @@ class FornecedorModel{
         } catch(PDOException $e) {
             echo "Erro: " . $e->getMessage();
             return false;
+        }
+    }
+
+    public function delete($id) {
+        try {
+
+            $connection = new Connection();
+            $pdo = $connection->getPdo();
+            $stmt = $pdo->prepare("DELETE FROM fornecedores WHERE id = :id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        } catch(PDOException $e) {
+            echo $e->getMessage();
         }
     }
     

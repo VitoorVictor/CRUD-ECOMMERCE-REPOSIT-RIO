@@ -12,7 +12,7 @@ $usuarios = new UsuarioModel();
 $usuarios = $usuarios->select();
 foreach($usuarios as $usuario){ ?>
 <main class="flex justify-center w-full h-full bg-violet-950">
-    <div class="w-full max-w-screen-xl flex flex-col">
+    <div class="w-full flex flex-col">
         <?php include_once('headerComponente.php') ?>
         <div class="flex flex-col h-full gap-4 w-full justify-center items-center">
             <h1 class="text-white font-bold text-3xl">USUARIOS</h1>
@@ -56,7 +56,6 @@ foreach($usuarios as $usuario){ ?>
                 id: id
             },
             success: function (response) {
-                alert(response);
             },
             error: function (xhr, status, error) {
                 alert('Erro ao atualizar a senha: ' + xhr.responseText);

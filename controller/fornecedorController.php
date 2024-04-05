@@ -17,6 +17,11 @@ class FornecedorController
         $fornecedor->insert();
     }
     
+    public function delete($id){
+        $produto = new FornecedorModel();
+        $produto->delete($id);
+    }
+
     public function viewUpdate(){
         include_once('./view/FornecedoresUpdate.php');
     }

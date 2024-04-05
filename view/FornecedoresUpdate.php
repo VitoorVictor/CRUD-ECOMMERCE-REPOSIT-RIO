@@ -8,7 +8,7 @@ if(!isset($_SESSION['id'])){
 include_once('painel/head.php');
 ?>
 <main class="flex justify-center w-full h-full bg-violet-950">
-    <div class="w-full max-w-screen-xl flex flex-col">
+    <div class="w-full  flex flex-col">
         <?php include_once('headerComponente.php') ?>
         <form action="" class="flex flex-col h-full gap-4 w-full justify-center items-center">
             <h1 class="text-white font-bold text-3xl">FORNECEDORES</h1>

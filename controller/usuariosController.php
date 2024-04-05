@@ -42,6 +42,17 @@ class UsuariosController
         $email = $_POST['email'];
         $usuario = new UsuarioModel($id,$nome, $sobrenome, $email, $senha);
         $usuario->update($id);
+        if ($usuario) {
+            echo json_encode($usuario);
+        } else {
+            http_response_code(404);
+            echo json_encode(array('mensagem' => 'Usuário não encontrado'));
+        }
+    } catch(PDOException $e) {
+        http_response_code(500);
+        echo json_encode(array('mensagem' => 'Erro ao buscar usuário: ' . $e->getMessage()));
+    }
+        
     }
 
     public function select($id) {
@@ -60,5 +71,25 @@ class UsuariosController
 
     public function viewUpdate(){
         include_once('./view/usuarioUpdate.php');
+    }
+
+    public function buscarPorId($id) {
+        try {
+            $connection = new Connection();
+            $pdo = $connection->getPdo();
+            $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($usuario) {
+                echo json_encode($usuario);
+            } else {
+                http_response_code(404);
+                echo json_encode(array('mensagem' => 'Usuário não encontrado'));
+            }
+        } catch(PDOException $e) {
+            http_response_code(500);
+            echo json_encode(array('mensagem' => 'Erro ao buscar usuário: ' . $e->getMessage()));
+        }
     }
 }

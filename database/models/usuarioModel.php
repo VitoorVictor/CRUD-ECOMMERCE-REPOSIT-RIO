@@ -121,7 +121,6 @@ class UsuarioModel{
             $stmt = $pdo->prepare("DELETE FROM usuarios WHERE id = :id");
             $stmt->bindParam(':id', $id);
             $stmt->execute();
-            header('Location:/painel/usuarios');
         } catch(PDOException $e) {
             echo $e->getMessage();
         }

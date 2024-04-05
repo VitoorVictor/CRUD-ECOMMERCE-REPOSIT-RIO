@@ -1,5 +1,5 @@
 <div id="menu"
-    class="hidden sm:block fixed sm:static max-h-max h-full w-44 bg-violet-950 text-white rounded-lg flex flex-col items-center pt-2">
+    class="hidden sm:block fixed sm:static max-h-max h-full w-44 bg-violet-950 text-white flex flex-col items-center pt-2">
     <div class="flex items-center justify-between sm:justify-center w-full p-2">
         <span class="text-white text-3xl font-semi-bold">PAINEL</span>
         <span class="material-symbols-outlined cursor-pointer btnMenu sm:hidden">
